@@ -9,11 +9,11 @@ let ticketPrice = +movieSelect.value;
 // My Functions
 
 // update counter
-function updateCounter(){
+function updateCounter() {
     const selectedSeats = document.querySelectorAll('.row .seat.selected');
     let selectSeatsCount = selectedSeats.length;
     count.textContent = selectSeatsCount;
-    total.textContent = selectSeatsCount*ticketPrice;
+    total.textContent = selectSeatsCount * ticketPrice;
 }
 
 // Event listener for seats
@@ -25,7 +25,7 @@ container.addEventListener('click', e => {
 })
 
 // Events listener for movies dropdown
-movieSelect.addEventListener('change' , e =>{
+movieSelect.addEventListener('change', e => {
     ticketPrice = +e.target.value;
     updateCounter();
 })
